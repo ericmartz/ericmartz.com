@@ -1,0 +1,179 @@
+/*
+Main CSS is for mobile phones.
+Media queries are below to enhance wider screens
+*/
+body{
+	font-family: 'Agnes', Times, serif;
+}
+
+.content {
+	width: 99%;
+	padding: 1%;
+}
+
+.image,
+.image .resize {
+	display: none;
+}
+
+.intro {
+	padding-top: 10%;
+}
+
+h1 {
+	font-size: 4em;
+}
+
+h2 {
+	font-size: 3em;
+	font-style: italic;
+}
+
+h3 {
+	font-size: 2em;
+	font-style: italic;
+}
+
+p {
+	font-size: 1.2em;
+	padding: 0 0 1% 0;
+}
+
+ul li {
+	font-size: 1.2em;
+	padding: 0 0 1% 0;
+}
+
+nav {
+	margin-top: 5%;
+}
+
+a {
+	margin-right: 5%;
+}
+
+/*
+Colors the .fa class for Font Awesome
+*/
+.fa {
+	color: #CE2029;
+}
+
+/*
+Clearfix Stuff
+Taken from Boilerplate
+*/
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+Form stuff
+*/
+:invalid { 
+  border: 1px solid #CE2029;
+}
+
+:required {
+  border-color: gray;
+}
+
+form {
+  width:100%;
+  margin:1%;
+}
+
+input, textarea {
+  font-family: Helvetica, Arial, sans-serif;
+  border:1px solid gray;
+  font-size:1.5em;
+  width:15em;
+  min-height:1.5em;
+  display:block;
+  margin-bottom:15px;
+  margin-top:5px;
+  outline: none;
+}
+
+input[type=submit] {
+  background:#CE2029;
+  padding:10px;
+  color:#FFF;
+}
+
+/*
+Media query for anything larger than 450px (next query at 750px)
+Makes image on homepage visible.
+Keeps the content for the About page and Contact page at 100% width
+Adds styling for Curtains
+*/
+@media screen and (min-width: 450px) {
+	#home .content {
+		float: left;
+		width: 48%;
+		overflow: hidden;
+	}
+
+	#home .image {
+		display: block;
+		float: right;
+		width: 50%;
+		overflow: hidden;
+	}
+
+	#home .image .resize {
+		display: block;
+		width: 100%;
+	}
+
+	#about .content,
+	#contact .content {
+		width: 100%;
+	}
+
+	#about .image,
+	#contact .image {
+		display: none;
+	}
+
+	/*
+	This is from Curtains
+	*/
+	/* Sliding panels */
+	.curtains>li {
+	    background:#FFF;
+	    box-shadow:0 0 12px #666;
+	}
+	.curtains>li:last-child{box-shadow:none}
+	.container {
+		margin: auto;
+	}
+}
+
+/*
+Media query for anything larger than 750px
+Resizes the content for the About page and Contact page to 50% screen width
+H1 becomes 6em, from 4em
+*/
+@media screen and (min-width: 750px) {
+	#about .content,
+	#contact .content {
+		width: 50%;
+	}
+
+	#about .image,
+	#contact .image {
+		width: 50%;
+	}
+
+	h1 {
+		font-size: 6em;
+	}
+}
+
