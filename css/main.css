@@ -6,11 +6,6 @@ body{
 	font-family: 'Agnes', Times, serif;
 }
 
-.content {
-	width: 99%;
-	padding: 1%;
-}
-
 .image,
 .image .resize {
 	display: none;
@@ -35,12 +30,12 @@ h3 {
 }
 
 p {
-	font-size: 1.2em;
+	font-size: 1em;
 	padding: 0 0 1% 0;
 }
 
 ul li {
-	font-size: 1.2em;
+	font-size: 1em;
 	padding: 0 0 1% 0;
 }
 
@@ -50,6 +45,10 @@ nav {
 
 a {
 	margin-right: 5%;
+}
+
+section {
+	min-height: 550px;
 }
 
 /*
@@ -114,6 +113,12 @@ Keeps the content for the About page and Contact page at 100% width
 Adds styling for Curtains
 */
 @media screen and (min-width: 450px) {
+
+	.content {
+		width: 99%;
+		padding: 1%;
+	}
+	
 	#home .content {
 		float: left;
 		width: 48%;
