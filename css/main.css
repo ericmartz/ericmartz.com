@@ -3,7 +3,7 @@ Main CSS is for mobile phones.
 Media queries are below to enhance wider screens
 */
 body{
-	font-family: 'Agnes', Times, serif;
+	font-family: Times, serif;
 }
 
 .image,
@@ -43,7 +43,7 @@ nav {
 	margin-top: 5%;
 }
 
-a {
+nav a {
 	margin-right: 5%;
 }
 
@@ -106,6 +106,21 @@ input[type=submit] {
   color:#FFF;
 }
 
+#overlay {
+  background:rgba(0,0,0,0.7);
+  width:100%;
+  height:100%;
+  position:absolute;
+  top:0;
+  left:0;
+  display:none;
+  text-align: center;
+}
+
+#overlay img {
+	margin-top: -5.5%;
+}
+
 /*
 Media query for anything larger than 450px (next query at 750px)
 Makes image on homepage visible.
@@ -115,17 +130,19 @@ Adds styling for Curtains
 @media screen and (min-width: 450px) {
 
 	.content {
-		width: 99%;
+		width: 95%;
 		padding: 1%;
 	}
 	
-	#home .content {
+	#home .content, 
+	#about .content {
 		float: left;
 		width: 48%;
 		overflow: hidden;
 	}
 
-	#home .image {
+	#home .image,
+	#about .image {
 		display: block;
 		float: right;
 		width: 50%;
@@ -137,12 +154,24 @@ Adds styling for Curtains
 		width: 100%;
 	}
 
-	#about .content,
+	#about .image {
+		text-align: center;
+	}
+
+	.gallery {
+		height: 188px;
+		width: 250px;
+		overflow: hidden;
+	}
+
+	.image a {
+		text-decoration: none;
+	}
+
 	#contact .content {
 		width: 100%;
 	}
 
-	#about .image,
 	#contact .image {
 		display: none;
 	}
@@ -169,7 +198,7 @@ H1 becomes 6em, from 4em
 @media screen and (min-width: 750px) {
 	#about .content,
 	#contact .content {
-		width: 50%;
+		width: 48%;
 	}
 
 	#about .image,
